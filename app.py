@@ -16,7 +16,7 @@ from detect import CENTER_MODEL
 
 state = SessionState.get(img1_cv = None, img2_cv=None, cmnd_detected=None, init=True, widget_key_1=str(randint(1000, 100000000)), widget_key_2=str(randint(1000, 100000000)),
                          status_cmnd = False)
-COSINE_THRESHOLD = 0.75
+COSINE_THRESHOLD = 0.7323
 
 def main():
     model_face, model_cmnd = load_model()

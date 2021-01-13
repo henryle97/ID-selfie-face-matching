@@ -56,7 +56,7 @@ class MatchingFaceModel():
         return 1 - (a / (np.sqrt(b) * np.sqrt(c)))
 
     def convert_to_percentage(self, cosine_score, min_val=0.0, max_val=2.0, cosine_threshold=0.75):
-        cosine_score = round(cosine_score, 2)
+        cosine_score = round(cosine_score, 4)
         percentage = max(0, min(100, 100 - (cosine_score - min_val) / (max_val - min_val) * 100))
         percentage_threshold = 100 - (cosine_threshold - min_val) / (max_val - min_val) * 100
         return percentage, percentage_threshold
