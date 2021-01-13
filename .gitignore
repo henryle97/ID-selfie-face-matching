@@ -1,2 +1,3 @@
 /models/*
+!/models/__init__.py
 /center/weights/*.pth
