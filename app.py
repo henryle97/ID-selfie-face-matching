@@ -6,6 +6,11 @@ from matching_face_model import MatchingFaceModel
 import cv2
 import numpy as np
 from center.utils.config import Cfg
+# import sys
+# import os
+# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/center")
+# print(os.path.dirname(os.path.abspath(__file__)) + "/center")
+
 from detect import CENTER_MODEL
 
 state = SessionState.get(img1_cv = None, img2_cv=None, cmnd_detected=None, init=True, widget_key_1=str(randint(1000, 100000000)), widget_key_2=str(randint(1000, 100000000)),
@@ -66,8 +71,6 @@ def main():
 
 
     # state.sync()
-
-
 
 
 

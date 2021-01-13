@@ -14,5 +14,5 @@ wget https://www.dropbox.com/s/tj96fsm6t6rq8ye/model-r100-arcface-ms1m-refine-v2
 unzip model-r100-arcface-ms1m-refine-v2.zip -d models
 rm model-r100-arcface-ms1m-refine-v2.zip
 
-gdown https://drive.google.com/uc?id=1igdw06UTw1SZxGa7JUCB-Vm3YiWl1cpt
+gdown https://drive.google.com/uc?id=1lubOiOXsh9A4D5FUCKubaR1K8GSfnnVq
 mv model_cmnd_best.pth center/weights/
