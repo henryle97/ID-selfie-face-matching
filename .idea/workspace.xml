@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="update">
+    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="update 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,11 +160,34 @@
       <option name="project" value="LOCAL" />
       <updated>1610509037731</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update 2">
+      <created>1610509837408</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610509837408</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update 3">
+      <created>1610509926615</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610509926615</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update 3">
+      <created>1610509938322</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610509938322</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update 2" />
+    <MESSAGE value="update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 3" />
   </component>
 </project>
