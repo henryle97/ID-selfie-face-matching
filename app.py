@@ -21,10 +21,10 @@ COSINE_THRESHOLD = 0.75
 def main():
     model_face, model_cmnd = load_model()
     have_cmnd = None
-    st.title("ID-Selfie Matching - Deep Learning Project")
+    st.title("ID-Selfie Matching")
     # Load model
 
-    st.sidebar.title("Application")
+    st.sidebar.title("Up ảnh")
     # # img1 = st.sidebar.file_uploader("Img1")
     uploaded_file_1 = st.sidebar.file_uploader("Upload CMND", key=state.widget_key_1)
     uploaded_file_2 = st.sidebar.file_uploader("Upload Selfie ", key=state.widget_key_2)
@@ -56,29 +56,32 @@ def main():
         st.title("Kết quả phát hiện CMND")
         if have_cmnd is None:
             st.error("Không phát hiện CMND")
-            st.image(state.cmnd_detected, use_column_width=True, channels='BGR')
+            st.image(state.cmnd_detected,  width=312, channels='BGR')
         else:
-            st.image(state.cmnd_detected, use_column_width=True, channels='BGR')
+            st.image(state.cmnd_detected,  width=312, channels='BGR')
         similar_score, img1_aligned, img2_aligned = model_face.matching(state.cmnd_detected, state.img2_cv)
         end_time = round(time.time() - t1, 2)
         if similar_score is not None:
-            col1, col2 = st.beta_columns(2)
+            st.title("Kết quả")
+            col1, col2 = st.beta_(2)
             with col1:
-                st.image(img1_aligned, channels='BGR', use_column_width=True)
-            with col2:
-                st.image(img2_aligned, channels='BGR', use_column_width=True)
+                st.image(img1_aligned, channels='BGR', width=224)
+                st.image(img2_aligned, channels='BGR', width=224)
 
-            percentage, percentage_threshold  = model_face.convert_to_percentage(cosine_score=similar_score, min_val=0, max_val=2,
-                                                                                 cosine_threshold=COSINE_THRESHOLD)
-            st.title("Kết quả (threshold={:.2f}%)".format(percentage_threshold))
-            st.success("Độ tương đồng {:.2f}%".format(percentage))
-            if percentage >= percentage_threshold:
-                st.success("MATCH")
-            else:
-                st.error("NOT MATCH")
-            st.info("Time: {:.2f}s".format(end_time))
-            state.img1_cv, state.img2_cv = None, None
-            # state.cmnd_detected = None
+            with col2:
+
+
+                percentage, percentage_threshold  = model_face.convert_to_percentage(cosine_score=similar_score, min_val=0, max_val=2,
+                                                                                     cosine_threshold=COSINE_THRESHOLD)
+
+                if percentage >= percentage_threshold:
+                    st.success("MATCH")
+                else:
+                    st.error("NOT MATCH")
+                st.success("Độ tương đồng {:.2f}% (threshold={:.2f}".format(percentage, percentage_threshold))
+                st.info("Time: {:.2f}s".format(end_time))
+                state.img1_cv, state.img2_cv = None, None
+                # state.cmnd_detected = None
         else:
             st.error("Không phát hiện khuôn mặt trong ảnh")
 
