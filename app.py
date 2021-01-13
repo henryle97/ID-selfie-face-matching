@@ -1,3 +1,4 @@
+import time
 from random import randint
 import streamlit as st
 from PIL import Image
@@ -47,6 +48,7 @@ def main():
     # if st.button("Check"):
 
     if state.img1_cv is not None and state.img2_cv is not None:
+        t1 = time.time()
         state.cmnd_detected = None
         state.cmnd_detected, have_cmnd = model_cmnd.detect_obj(state.img1_cv)
 
@@ -58,6 +60,7 @@ def main():
         else:
             st.image(state.cmnd_detected, use_column_width=True, channels='BGR')
         similar_score, img1_aligned, img2_aligned = model_face.matching(state.cmnd_detected, state.img2_cv)
+        end_time = round(time.time() - t1, 2)
         if similar_score is not None:
             col1, col2 = st.beta_columns(2)
             with col1:
@@ -73,7 +76,7 @@ def main():
                 st.success("MATCH")
             else:
                 st.error("NOT MATCH")
-
+            st.info("Time: {:.2f}s".format(end_time))
             state.img1_cv, state.img2_cv = None, None
             # state.cmnd_detected = None
         else:
