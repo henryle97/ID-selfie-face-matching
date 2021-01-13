@@ -77,7 +77,7 @@ def main():
 @st.cache(allow_output_mutation=True)  # hash_func
 def load_model(config_path="./center/config/cmnd.yml"):
     print("Loading model ...")
-    model_face = MatchingFaceModel(model_path='./models/model-r100-ii/model,0', gpu=0, use_large_detector=True)
+    model_face = MatchingFaceModel(model_path='weights/model-r100-ii/model,0', gpu=0, use_large_detector=True)
     config = Cfg.load_config_from_file(config_path)
     model_cmnd = CENTER_MODEL(config)
     return model_face, model_cmnd

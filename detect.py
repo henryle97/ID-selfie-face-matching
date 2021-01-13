@@ -1,13 +1,10 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import os
-
 import torch
+
 import sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/center")
-# print(os.path.dirname(os.path.abspath(__file__)) + "/center")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "center"))
+# print(os.path.join(os.path.dirname(os.path.abspath(__file__)), "center"))
+# print(sys.path)
 
 from models.model import load_model, create_model
 from detector.detector import BaseDetector

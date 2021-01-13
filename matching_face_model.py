@@ -4,8 +4,9 @@ from face_model import FaceModel
 import time
 import numpy as np
 
+
 class MatchingFaceModel():
-    def __init__(self, image_size = (112, 112), model_path= './models/model-r100-ii/model,0', scale=640, gpu=-1, use_large_detector=False):
+    def __init__(self, image_size = (112, 112), model_path= './weights/model-r100-ii/model,0', scale=640, gpu=-1, use_large_detector=False):
         self.image_size = image_size
         self.model_path = model_path
         self.gpu = gpu
@@ -15,8 +16,6 @@ class MatchingFaceModel():
         model_epoch = int(vec[1])
         self.face_model = FaceModel(gpu, model_prefix, model_epoch, use_large_detector=use_large_detector, detector_type='retina')
         self.scale = scale
-
-
 
     def matching(self, img1, img2):
         t1 = time.time()

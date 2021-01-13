@@ -126,9 +126,11 @@ class FaceModel:
         db = mx.io.DataBatch(data=(data, ))
         self.model.forward(db, is_train=False)
         emb = self.model.get_outputs()[0].asnumpy()[0]
-        # normalize feature
+        # L2 normalize feature
         norm = np.sqrt(np.sum(emb*emb)+0.00001)
         emb /= norm
+
+        # tuong tu
         # emb = sklearn.preprocessing.normalize(emb)
         return emb
 
