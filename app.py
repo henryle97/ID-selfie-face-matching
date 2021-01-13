@@ -15,6 +15,7 @@ from detect import CENTER_MODEL
 
 state = SessionState.get(img1_cv = None, img2_cv=None, cmnd_detected=None, init=True, widget_key_1=str(randint(1000, 100000000)), widget_key_2=str(randint(1000, 100000000)),
                          status_cmnd = False)
+COSINE_THRESHOLD = 0.75
 
 def main():
     model_face, model_cmnd = load_model()
@@ -63,7 +64,16 @@ def main():
                 st.image(img1_aligned, channels='BGR', use_column_width=True)
             with col2:
                 st.image(img2_aligned, channels='BGR', use_column_width=True)
-            st.success("Similar: " + str(float(similar_score)))
+
+            percentage, percentage_threshold  = model_face.convert_to_percentage(cosine_score=similar_score, min_val=0, max_val=2,
+                                                                                 cosine_threshold=COSINE_THRESHOLD)
+            st.title("Kết quả (threshold={:.2f}%)".format(percentage_threshold))
+            st.success("Độ tương đồng {:.2f}%".format(percentage))
+            if percentage >= percentage_threshold:
+                st.success("MATCH")
+            else:
+                st.error("NOT MATCH")
+
             state.img1_cv, state.img2_cv = None, None
             # state.cmnd_detected = None
         else:
