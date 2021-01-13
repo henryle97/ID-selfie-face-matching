@@ -7,7 +7,7 @@ import os
 import torch
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + "/center")
-print(os.path.dirname(os.path.abspath(__file__)) + "/center")
+# print(os.path.dirname(os.path.abspath(__file__)) + "/center")
 
 from models.model import load_model, create_model
 from detector.detector import BaseDetector
