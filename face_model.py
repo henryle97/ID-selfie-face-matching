@@ -79,6 +79,8 @@ class FaceModel:
             print("points: ", points, np.shape(points[:, 0]))
             if bbox.shape[0] == 0:
                 return None
+
+
             bbox = bbox[0, 0:4]
             pts5 = points[0, :].reshape((2, 5)).T
         else:
@@ -86,14 +88,15 @@ class FaceModel:
             if bbox.shape[0] == 0:
                 return None
             # print(bbox)
-            bbox = bbox[0, 0:4]
+            idx_max_box = self.get_largest_face(bbox)
+            bbox = bbox[idx_max_box, 0:4]
 
 
             # head_img = self.extend_and_crop_head(face_img, bbox, ratio_extend=0.4)
             # bbox, pts5 = self.detector.detect(head_img, threshold=0.8)
             # if bbox.shape[0] == 0:
             #     return None
-            pts5 = pts5[0, :]
+            pts5 = pts5[idx_max_box, :]
 
         head_img = face_img
         nimg = face_align.norm_crop(head_img, pts5)
@@ -117,6 +120,21 @@ class FaceModel:
         print(x_min, y_min, x_max, y_max)
         head_img = img[y_min:y_max, x_min:x_max]
         return  head_img
+
+    def get_largest_face(self, boxes):
+        max_idx = 0
+        max_s = -10
+        for i in range(boxes.shape[0]):
+            box = boxes[i, 0:4]
+            x_min, y_min, x_max, y_max = box
+            s = (x_max - x_min) * (y_max - y_min)
+            if s > max_s:
+                max_idx = i
+                max_s = s
+
+        return max_idx
+
+
 
     def get_feature(self, aligned):
         a = cv2.cvtColor(aligned, cv2.COLOR_BGR2RGB)
