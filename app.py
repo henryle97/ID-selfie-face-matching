@@ -63,7 +63,7 @@ def main():
         end_time = round(time.time() - t1, 2)
         if similar_score is not None:
             st.title("Kết quả")
-            col1, col2 = st.beta_(2)
+            col1, col2 = st.beta_columns(2)
             with col1:
                 st.image(img1_aligned, channels='BGR', width=224)
                 st.image(img2_aligned, channels='BGR', width=224)

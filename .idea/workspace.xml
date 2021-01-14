@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="update view">
+    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="update threshold">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matching_face_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/matching_face_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/center/weights" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Object_Corner_Detection" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -232,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610529934069</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update threshold">
+      <created>1610532451714</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610532451714</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,6 +250,7 @@
     <MESSAGE value="add percentage" />
     <MESSAGE value="add time" />
     <MESSAGE value="update view" />
-    <option name="LAST_COMMIT_MESSAGE" value="update view" />
+    <MESSAGE value="update threshold" />
+    <option name="LAST_COMMIT_MESSAGE" value="update threshold" />
   </component>
 </project>
