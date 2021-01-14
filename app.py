@@ -78,7 +78,7 @@ def main():
                     st.success("MATCH")
                 else:
                     st.error("NOT MATCH")
-                st.success("Độ tương đồng {:.2f}% (threshold={:.2f}".format(percentage, percentage_threshold))
+                st.success("Độ tương đồng {:.2f}% (threshold={:.2f})".format(percentage, percentage_threshold))
                 st.info("Time: {:.2f}s".format(end_time))
                 state.img1_cv, state.img2_cv = None, None
                 # state.cmnd_detected = None
