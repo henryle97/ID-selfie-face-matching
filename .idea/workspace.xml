@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="find largest face">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ac04bb18-6de7-4029-bee1-5d820c705665" name="Default Changelist" comment="yes">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610612133351</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="yes">
+      <created>1610890175551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610890175551</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +292,7 @@
     <MESSAGE value="update threshold" />
     <MESSAGE value="update" />
     <MESSAGE value="find largest face" />
-    <option name="LAST_COMMIT_MESSAGE" value="find largest face" />
+    <MESSAGE value="yes" />
+    <option name="LAST_COMMIT_MESSAGE" value="yes" />
   </component>
 </project>

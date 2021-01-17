@@ -71,7 +71,7 @@ def main():
             with col2:
 
 
-                percentage, percentage_threshold  = model_face.convert_to_percentage(cosine_score=similar_score, min_val=0, max_val=2,
+                percentage, percentage_threshold  = model_face.convert_to_percentage(cosine_score=similar_score, min_val=0.12, max_val=1.65,
                                                                                      cosine_threshold=COSINE_THRESHOLD)
 
                 if percentage >= percentage_threshold:
