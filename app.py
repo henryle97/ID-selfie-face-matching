@@ -54,7 +54,7 @@ def main():
 
 
         st.title("Kết quả phát hiện CMND")
-        if have_cmnd is None:
+        if not have_cmnd:
             st.error("Không phát hiện CMND")
             st.image(state.cmnd_detected,  width=312, channels='BGR')
         else:
