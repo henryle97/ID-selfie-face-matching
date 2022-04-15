@@ -1,12 +1,11 @@
 import cv2
-
 from face_model import FaceModel
 import time
 import numpy as np
 
 
 class MatchingFaceModel():
-    def __init__(self, image_size = (112, 112), model_path= './weights/model-r100-ii/model,0', scale=640, gpu=-1, use_large_detector=False):
+    def __init__(self, image_size = (112, 112), model_path= './weights/model-r100-ii/model', scale=640, gpu=-1, use_large_detector=False):
         self.image_size = image_size
         self.model_path = model_path
         self.gpu = gpu
